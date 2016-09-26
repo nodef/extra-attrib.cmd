@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\oDateTime.cs" />
+    <Compile Include="data\oVal.cs" />
+    <Compile Include="io\oFileAttributes.cs" />
+    <Compile Include="io\oFileSystemInfo.cs" />
+    <Compile Include="oParams.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
