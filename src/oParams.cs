@@ -16,9 +16,9 @@ namespace orez.oattrib {
 		/// </summary>
 		public bool Utc;
 		/// <summary>
-		/// Selects directories too.
+		/// Include directories too.
 		/// </summary>
-		public bool Directory;
+		public bool Directories;
 		/// <summary>
 		/// Recurses through subdirectories.
 		/// </summary>
@@ -90,7 +90,7 @@ namespace orez.oattrib {
 				else if (c == '+') on = true;
 				else if (c == 'f') Filetime = true;
 				else if (c == 'u') Utc = true;
-				else if (c == 'j') Directory = true;
+				else if (c == 'j') Directories = true;
 				else if (c == 'k') Recursize = true;
 				else if (c == 'l') Link = true;
 				else if (c == 'y') Verbose = true;
@@ -114,7 +114,7 @@ namespace orez.oattrib {
 			string c = b.ToLower();
 			if (c == "filetime") Filetime = true;
 			else if (c == "utc") Utc = true;
-			else if (c == "directory") Directory = true;
+			else if (c == "directories") Directories = true;
 			else if (c == "recursive") Recursize = true;
 			else if (c == "link") Link = true;
 			else if (c == "verbose") Verbose = true;

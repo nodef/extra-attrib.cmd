@@ -20,7 +20,7 @@ namespace orez.oattrib {
 			SearchPattern(p.Path, out cd, out sp);
 			var cdi = new DirectoryInfo(cd);
 			var opt = p.Recursize ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
-			var enm = p.Directory ? cdi.EnumerateFileSystemInfos(sp, opt) : cdi.EnumerateFiles(sp, opt);
+			var enm = p.Directories ? cdi.EnumerateFileSystemInfos(sp, opt) : cdi.EnumerateFiles(sp, opt);
 			foreach(var o in enm) {
 				try { SetAttribs(o, p); }
 				catch (Exception) { }
